@@ -1,0 +1,28 @@
+# Core utilities
+python-dotenv
+
+# LangChain ecosystem
+langchain
+langchain-core
+langchain-community
+
+# Integrations
+langchain-chroma
+langchain-huggingface
+langchain-google-genai
+
+# Vector database
+chromadb
+
+# Embeddings (HuggingFace)
+sentence-transformers
+
+# Google Gemini API
+google-generativeai
+
+# ML / backend
+torch
+
+# Optional but recommended
+tqdm
+numpy
