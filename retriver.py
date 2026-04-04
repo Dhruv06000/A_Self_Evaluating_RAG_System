@@ -68,7 +68,7 @@ print("\n--- Generated Response ---")
 print("Content only:")
 print(result.content)
 
-# Synthetic Questions: 
+# General Questions:
 
 # 1. "What was NVIDIA's first graphics accelerator called?"
 # 2. "Which company did NVIDIA acquire to enter the mobile processor market?"
