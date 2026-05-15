@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "category": "rag_concepts",
+    "question": "What is Retrieval-Augmented Generation?",
+    "ground_truth": "Retrieval-Augmented Generation, or RAG, is a technique that improves language model answers by retrieving relevant external knowledge at query time and using that retrieved context during generation."
+  },
+  {
+    "id": 2,
+    "category": "rag_concepts",
+    "question": "What are the two main stages in a RAG system?",
+    "ground_truth": "A RAG system generally has an indexing stage, where documents are ingested, split, embedded, and stored, and a retrieval-and-generation stage, where relevant context is retrieved and passed to a language model to generate an answer."
+  },
+  {
+    "id": 3,
+    "category": "rag_concepts",
+    "question": "Why is retrieval useful for large language models?",
+    "ground_truth": "Retrieval is useful because LLMs have finite context windows and static training knowledge. Retrieval allows them to access relevant external and up-to-date information at query time."
+  },
+  {
+    "id": 4,
+    "category": "rag_concepts",
+    "question": "What is the difference between retrieval and RAG?",
+    "ground_truth": "Retrieval fetches relevant information from a knowledge base, while RAG combines retrieval with generation so that an LLM can produce grounded, context-aware answers using the retrieved information."
+  },
+  {
+    "id": 5,
+    "category": "rag_concepts",
+    "question": "What is 2-step RAG?",
+    "ground_truth": "2-step RAG is a RAG architecture where retrieval is always performed before generation. It is simple, predictable, and suitable for applications such as FAQs and documentation bots."
+  },
+  {
+    "id": 6,
+    "category": "rag_concepts",
+    "question": "What is Agentic RAG?",
+    "ground_truth": "Agentic RAG is a retrieval-augmented architecture where an LLM-powered agent decides when and how to retrieve information during reasoning, instead of always retrieving before generation."
+  },
+  {
+    "id": 7,
+    "category": "rag_concepts",
+    "question": "Why can Agentic RAG have variable latency?",
+    "ground_truth": "Agentic RAG can have variable latency because the agent may perform different numbers of reasoning and retrieval steps depending on the query and the tools it decides to use."
+  },
+  {
+    "id": 8,
+    "category": "retrieval",
+    "question": "What is a retrieval pipeline?",
+    "ground_truth": "A retrieval pipeline is the workflow used to ingest external data, split it into chunks, convert it into embeddings, store it in a vector store, and retrieve relevant documents for a query."
+  },
+  {
+    "id": 9,
+    "category": "retrieval",
+    "question": "What are the main building blocks of retrieval in LangChain?",
+    "ground_truth": "The main retrieval building blocks in LangChain include document loaders, text splitters, embedding models, vector stores, and retrievers."
+  },
+  {
+    "id": 10,
+    "category": "retrieval",
+    "question": "What is a retriever in LangChain?",
+    "ground_truth": "A retriever is an interface that returns relevant documents for an unstructured query. It is used to fetch context that can be supplied to an LLM."
+  },
+  {
+    "id": 11,
+    "category": "retrieval",
+    "question": "What is hybrid retrieval?",
+    "ground_truth": "Hybrid retrieval combines multiple retrieval strategies, such as semantic vector search and keyword or sparse search, to improve the quality of retrieved results."
+  },
+  {
+    "id": 12,
+    "category": "retrieval",
+    "question": "Why is hybrid retrieval useful for domain-specific question answering?",
+    "ground_truth": "Hybrid retrieval is useful because it can capture both semantic similarity and exact keyword matches, which improves retrieval quality for technical or domain-specific questions."
+  },
+  {
+    "id": 13,
+    "category": "embeddings",
+    "question": "What are embedding models used for?",
+    "ground_truth": "Embedding models transform raw text into fixed-length numerical vectors that capture semantic meaning, allowing machines to compare and search text based on meaning rather than exact words."
+  },
+  {
+    "id": 14,
+    "category": "embeddings",
+    "question": "How do embeddings help semantic search?",
+    "ground_truth": "Embeddings help semantic search by placing texts with similar meanings close together in vector space, allowing related documents to be found even when they use different wording."
+  },
+  {
+    "id": 15,
+    "category": "embeddings",
+    "question": "What are common similarity metrics for embeddings?",
+    "ground_truth": "Common similarity metrics for embeddings include cosine similarity, Euclidean distance, and dot product."
+  },
+  {
+    "id": 16,
+    "category": "embeddings",
+    "question": "What is cosine similarity?",
+    "ground_truth": "Cosine similarity measures the angle between two vectors and is commonly used to compare how semantically similar two text embeddings are."
+  },
+  {
+    "id": 17,
+    "category": "embeddings",
+    "question": "What is the difference between local and hosted embedding models?",
+    "ground_truth": "Hosted embedding models are accessed through APIs and usually provide strong quality with no local infrastructure, while local open-source models run on the user's machine or server, avoid per-call API cost, and keep data local."
+  },
+  {
+    "id": 18,
+    "category": "embeddings",
+    "question": "Why does embedding dimensionality matter?",
+    "ground_truth": "Embedding dimensionality affects storage size, query compute, and retrieval quality. Larger vectors may improve accuracy but require more storage and computation."
+  },
+  {
+    "id": 19,
+    "category": "embeddings",
+    "question": "Why can long-context embedding models be useful?",
+    "ground_truth": "Long-context embedding models are useful when chunks are long, such as full-page technical documentation or legal paragraphs, because they can represent longer text without truncation."
+  },
+  {
+    "id": 20,
+    "category": "langchain_docs",
+    "question": "What is a LangChain Document object?",
+    "ground_truth": "A LangChain Document object represents a unit of text with associated metadata. It commonly includes page_content, metadata, and optionally an id."
+  },
+  {
+    "id": 21,
+    "category": "langchain_docs",
+    "question": "Why are text splitters used in retrieval systems?",
+    "ground_truth": "Text splitters break large documents into smaller chunks so that relevant portions can be retrieved more accurately and fit within the model's context window."
+  },
+  {
+    "id": 22,
+    "category": "langchain_docs",
+    "question": "Why is chunk overlap used during document splitting?",
+    "ground_truth": "Chunk overlap helps reduce the risk of separating a statement from important surrounding context, improving downstream retrieval and question answering."
+  },
+  {
+    "id": 23,
+    "category": "langchain_docs",
+    "question": "What does PyPDFLoader do?",
+    "ground_truth": "PyPDFLoader loads a PDF file into LangChain Document objects, typically one Document per PDF page, with page content and metadata such as source and page number."
+  },
+  {
+    "id": 24,
+    "category": "langchain_docs",
+    "question": "What does RecursiveCharacterTextSplitter do?",
+    "ground_truth": "RecursiveCharacterTextSplitter splits documents into smaller chunks using common separators such as newlines and spaces until chunks fit the desired size."
+  },
+  {
+    "id": 25,
+    "category": "chroma",
+    "question": "What is Chroma?",
+    "ground_truth": "Chroma is a database for retrieval that can store documents, metadata, and embeddings, and supports vector search, full-text search, metadata filtering, and hybrid retrieval."
+  },
+  {
+    "id": 26,
+    "category": "chroma",
+    "question": "What is a Chroma collection?",
+    "ground_truth": "A Chroma collection is the fundamental unit of storage and querying in Chroma. It contains items with unique IDs, embedding vectors, optional metadata, and documents."
+  },
+  {
+    "id": 27,
+    "category": "chroma",
+    "question": "What restrictions apply to Chroma collection names?",
+    "ground_truth": "Chroma collection names must be unique within a database, must be between 3 and 512 characters, must start and end with a lowercase letter or digit, and may contain dots, dashes, and underscores."
+  },
+  {
+    "id": 28,
+    "category": "chroma",
+    "question": "What is the difference between query and get in Chroma?",
+    "ground_truth": "In Chroma, query performs nearest-neighbor similarity search over embeddings, while get retrieves records by ID or filters without similarity ranking."
+  },
+  {
+    "id": 29,
+    "category": "chroma",
+    "question": "What does n_results control in a Chroma query?",
+    "ground_truth": "n_results controls how many results Chroma returns per input query during similarity search."
+  },
+  {
+    "id": 30,
+    "category": "chroma",
+    "question": "What is metadata filtering in Chroma used for?",
+    "ground_truth": "Metadata filtering is used to restrict query or get results based on metadata conditions, such as retrieving records where a metadata field has a specific value."
+  },
+  {
+    "id": 31,
+    "category": "chroma",
+    "question": "What deployment modes does Chroma support?",
+    "ground_truth": "Chroma supports local deployment for prototyping, single-node deployment for small to medium workloads, and distributed deployment for large production workloads."
+  },
+  {
+    "id": 32,
+    "category": "chroma",
+    "question": "What are tenants, databases, and collections in Chroma's data model?",
+    "ground_truth": "In Chroma's data model, tenants provide top-level isolation, databases group collections into logical namespaces, and collections store and query embeddings, documents, and metadata."
+  },
+  {
+    "id": 33,
+    "category": "transformer_pdf",
+    "question": "What architecture was introduced in the Attention Is All You Need paper?",
+    "ground_truth": "The paper introduced the Transformer, a network architecture based solely on attention mechanisms, without recurrence or convolution."
+  },
+  {
+    "id": 34,
+    "category": "transformer_pdf",
+    "question": "Why does the Transformer avoid recurrence?",
+    "ground_truth": "The Transformer avoids recurrence by using attention mechanisms to model dependencies between input and output positions, enabling more parallel computation than recurrent models."
+  },
+  {
+    "id": 35,
+    "category": "transformer_pdf",
+    "question": "What is scaled dot-product attention?",
+    "ground_truth": "Scaled dot-product attention computes attention weights using the dot product of queries and keys, scales the result, applies softmax, and uses the weights to combine values."
+  },
+  {
+    "id": 36,
+    "category": "transformer_pdf",
+    "question": "What is multi-head attention?",
+    "ground_truth": "Multi-head attention runs several attention operations in parallel with different learned projections, allowing the model to attend to information from different representation subspaces."
+  },
+  {
+    "id": 37,
+    "category": "transformer_pdf",
+    "question": "What are the main components of the Transformer encoder and decoder?",
+    "ground_truth": "The Transformer encoder and decoder are built from stacked layers that use multi-head attention and position-wise feed-forward networks, with residual connections and normalization."
+  },
+  {
+    "id": 38,
+    "category": "transformer_pdf",
+    "question": "Why is self-attention important in the Transformer?",
+    "ground_truth": "Self-attention allows the model to relate different positions within a sequence directly, helping it capture dependencies regardless of their distance."
+  },
+  {
+    "id": 39,
+    "category": "transformer_pdf",
+    "question": "Why are Transformers more parallelizable than recurrent neural networks?",
+    "ground_truth": "Transformers are more parallelizable because they process sequence positions using attention rather than sequential recurrence, reducing the need to process tokens one step at a time."
+  },
+  {
+    "id": 40,
+    "category": "transformer_pdf",
+    "question": "What machine translation tasks were used to evaluate the Transformer?",
+    "ground_truth": "The Transformer was evaluated on WMT 2014 English-to-German and English-to-French machine translation tasks."
+  },
+  {
+    "id": 41,
+    "category": "multi_hop",
+    "question": "How do embeddings and vector stores work together in a RAG system?",
+    "ground_truth": "Embeddings convert text chunks and queries into numerical vectors, and vector stores index those vectors so that semantically similar chunks can be retrieved for a user query."
+  },
+  {
+    "id": 42,
+    "category": "multi_hop",
+    "question": "Explain how a technical document becomes searchable in a RAG system.",
+    "ground_truth": "A technical document is loaded, split into chunks, converted into embeddings, stored in a vector database, and later retrieved using semantic similarity when a user asks a relevant question."
+  },
+  {
+    "id": 43,
+    "category": "multi_hop",
+    "question": "How can retrieval reduce hallucinations in LLM answers?",
+    "ground_truth": "Retrieval can reduce hallucinations by supplying the LLM with relevant external context and requiring the answer to be grounded in that retrieved information."
+  },
+  {
+    "id": 44,
+    "category": "multi_hop",
+    "question": "Why is a vector database useful for technical documentation question answering?",
+    "ground_truth": "A vector database is useful because it stores embedded documentation chunks and enables semantic search, allowing the system to retrieve relevant technical context for a user's question."
+  },
+  {
+    "id": 45,
+    "category": "multi_hop",
+    "question": "How does a retriever interact with a vector database?",
+    "ground_truth": "A retriever receives a user query, converts or uses it for similarity search, queries the vector database, and returns the most relevant documents or chunks."
+  },
+  {
+    "id": 46,
+    "category": "edge_case",
+    "question": "Who is the CEO of Chroma?",
+    "ground_truth": "The provided knowledge base does not contain enough information to answer this question."
+  },
+  {
+    "id": 47,
+    "category": "edge_case",
+    "question": "What is the salary of the LangChain founder?",
+    "ground_truth": "The provided knowledge base does not contain enough information to answer this question."
+  },
+  {
+    "id": 48,
+    "category": "edge_case",
+    "question": "Which Transformer version introduced GPT-5?",
+    "ground_truth": "The provided knowledge base does not contain enough information to answer this question."
+  },
+  {
+    "id": 49,
+    "category": "edge_case",
+    "question": "Does LangChain require CUDA for embeddings?",
+    "ground_truth": "The provided knowledge base does not state that LangChain requires CUDA for embeddings. It discusses hosted and local embedding models but does not require CUDA."
+  },
+  {
+    "id": 50,
+    "category": "edge_case",
+    "question": "What is the GPU memory usage of Chroma collections?",
+    "ground_truth": "The provided knowledge base does not contain enough information to answer this question."
+  }
+]

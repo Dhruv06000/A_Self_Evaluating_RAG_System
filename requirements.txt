@@ -1,0 +1,38 @@
+# Core utilities
+python-dotenv
+
+# LangChain ecosystem
+langchain
+langchain-core
+langchain-community
+
+# Integrations
+langchain-chroma
+langchain-huggingface
+langchain-groq 
+langchain-google-genai
+         
+
+# Vector database
+chromadb
+
+# Embeddings
+sentence-transformers
+
+# HuggingFace dataset downloader
+datasets                
+
+# ML backend (required by sentence-transformers)
+torch
+
+# BM25 retriever dependency
+rank-bm25              
+
+# Optional but recommended
+tqdm
+numpy
+wikipedia
+
+#for Evaluation
+deepeval
+ollama

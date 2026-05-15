@@ -1,0 +1,50 @@
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.new_venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# DeepEval / evaluation cache
+.deepeval/
+
+# Vector database
+db/chroma_db/
+
+# Evaluation results
+evaluation/results/
+src/evaluation/results/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Temporary files
+tmp/
+temp/
+
+# Large model/cache files
+.cache/
+
+data/
+!data/.gitkeep
