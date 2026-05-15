@@ -1,38 +1,36 @@
 # Core utilities
 python-dotenv
+tqdm
+numpy
 
 # LangChain ecosystem
 langchain
 langchain-core
 langchain-community
 
-# Integrations
+# LangChain integrations
 langchain-chroma
 langchain-huggingface
-langchain-groq 
-langchain-google-genai
-         
+langchain-groq
+langchain-ollama
 
 # Vector database
 chromadb
 
-# Embeddings
+# Embeddings and reranking
 sentence-transformers
-
-# HuggingFace dataset downloader
-datasets                
-
-# ML backend (required by sentence-transformers)
 torch
 
+# PDF loading
+pypdf
+
 # BM25 retriever dependency
-rank-bm25              
+rank-bm25
 
-# Optional but recommended
-tqdm
-numpy
-wikipedia
+# Web/document download utilities
+requests
+beautifulsoup4
 
-#for Evaluation
+# Evaluation
 deepeval
 ollama
